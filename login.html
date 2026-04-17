@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Login</title>
+    <style>
+body{
+    background:#f0f0f0;
+    font-family:Arial;
+    background-image: url(3a8bd6e645e58e4dddd344773d3c1c22.jpg);
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    margin:0;
+    padding:0;
+}
+.box{
+    width:90%;
+    max-width:300px;
+    margin:100px auto;
+    background:white;
+    padding:30px;
+    border:1px solid #ccc;
+    box-sizing:border-box;
+}
+h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+.item{
+    margin-bottom:15px;
+}
+label{
+    display:block;
+    margin-bottom:5px;
+}
+input{
+    width:100%;
+    padding:8px;
+    border:1px solid #ccc;
+    box-sizing:border-box;
+}
+button{
+    width:100%;
+    padding:8px;
+    background:#007bff;
+    color:white;
+    border:none;
+    box-sizing:border-box;
+}
+.link{
+    text-align:center;
+    margin-top:15px;
+    font-size:14px;
+}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Seller Login</h2>
+        <form id="loginForm">
+            <div class="item">
+                <label>Username</label>
+                <input type="text" name="username" placeholder="Enter your username">
+            </div>
+            <div class="item">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Password">
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <div class="link">
+            No account? <a href="register.html">Register now</a >
+        </div>
+    </div>
+
+<script>
+const form=document.getElementById('loginForm')
+form.addEventListener('submit',function(e){
+    e.preventDefault()
+    const user=form.username.value
+    const pwd=form.password.value
+    const save=localStorage.getItem(user)
+    if(save && save===pwd){
+        alert('Login success')
+    }else{
+        alert('Login failed')
+    }
+})
+</script>
+</body>
+</html>
