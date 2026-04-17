@@ -5,6 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seller Login</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background: #2c3e50;
+            padding: 15px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+        .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .nav-links a:hover {
+            color: #3498db;
+        }
 body{
     background:#f0f0f0;
     font-family:Arial;
@@ -54,9 +87,29 @@ button{
     margin-top:15px;
     font-size:14px;
 }
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+            .nav-links {
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 <body>
+    <div class="navbar">
+        <div class="logo">CarHub</div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="seller.html">Seller Center</a>
+            <a href="register.html">Register</a>
+            <a href="login.html">Login</a>
+            <a href="add-car.html">Add Car</a>
+            <a href="search.html">Search Car</a>
+        </div>
+    </div>
     <div class="box">
         <h2>Seller Login</h2>
         <form id="loginForm">
